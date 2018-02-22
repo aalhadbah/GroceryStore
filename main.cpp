@@ -7,15 +7,32 @@ using namespace std;
 int main()
 {
   string list[5]; //array of 5 strings
-  int numItems = 5;
+  int numItems = 0;
   char input;
-do{
+  string items;
+
+do
+{
   cout<<"\n==GROCERY LIST MANAGER==";
   cout<<"\nEnter your choice: ";
   cout<<"\n (A)dd an item";
   cout<<"\n (Q)uit";
   cout<<"\nYour choice (A/Q): ";
   cin>>input;
+  if(( input == 'a' ) || ( input == 'A'))
+{  
+cout<<"\nwhat is the item?";
+  cin>>items;
+  numItems++;
+  if( numItems >= 6 )
+  {
+
+ cout<< "You'll need a bigger list!";
+
+  }
+ }
+
+
 }
 
 while(( input!='q' ) && ( input!='Q' ));
