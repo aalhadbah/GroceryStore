@@ -21,7 +21,7 @@ do
   cin>>input;
   if(( input == 'a' ) || ( input == 'A'))
 {  
-cout<<"what is the item?\n";
+cout<<"What is the item?\n";
   cin>>items;
   numItems++;
   if( numItems >= 6 )
