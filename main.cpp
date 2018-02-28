@@ -3,10 +3,11 @@
 #include<string>
 
 using namespace std;
+const int LIST_SIZE = 5;
 
 int main()
 {
-  string list[5]; //array of 5 strings
+  string list[LIST_SIZE]; //array of 5 strings
   int numItems = 0;
   char input;
   string items;
@@ -19,23 +20,52 @@ do
   cout<<"\n (Q)uit";
   cout<<"\nYour choice (A/Q): ";
   cin>>input;
-  if(( input == 'a' ) || ( input == 'A'))
+  if(input == 'a' || input == 'A')
 {  
 cout<<"What is the item?\n";
-  cin>>items;
-  numItems++;
-  if( numItems >= 6 )
-  {
+  cin>>items; 
+ 
+ if(numItems<LIST_SIZE)
+{
+ 
+ 
+ 
+ list[numItems]=items;
+ numItems++;
 
- cout<< "You'll need a bigger list!\n";
-
-  }
- }
 
 
 }
 
-while(( input!='q' ) && ( input!='Q' ));
 
+else{
+
+
+ cout<< "You'll need a bigger list!\n";
+
+}
+
+
+
+
+}
+
+          }while( input!='q' &&  input!='Q');
+
+
+cout<<"==ITEMS TO BUY=="<<endl;
+for(int numItems=0; numItems<LIST_SIZE; numItems++)
+{
+
+     cout<<endl<<numItems+1 << " ";
+
+if(list[numItems]!="")
+{
+   cout<<list[numItems];
+
+}
+
+
+}cout<<endl;
   return 0;
 }
