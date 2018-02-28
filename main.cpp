@@ -53,7 +53,7 @@ else{
           }while( input!='q' &&  input!='Q');
 
 
-cout<<"==ITEMS TO BUY=="<<endl;
+cout<<"==ITEMS TO BUY==";
 for(int numItems=0; numItems<LIST_SIZE; numItems++)
 {
 
